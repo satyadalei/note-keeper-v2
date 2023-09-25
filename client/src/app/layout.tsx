@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Poppins } from 'next/font/google'
-
+import Navbar from '@/components/Navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 const poppins = Poppins({
@@ -11,9 +11,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Movie details app',
-  description: 'This app tells about the movies',
-  keywords : ["movies","watchmovies"]
+  title: 'Note keeper web app',
+  description: 'This app helps to create & organize notes.',
+  keywords : ["note","online note keeper app", "note keeper online"]
 }
 
 export default function RootLayout({
@@ -23,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className} >{children}</body>
+      <body className={poppins.className} >
+        <Navbar/>
+        {children}
+      </body>
     </html>
   )
 }
