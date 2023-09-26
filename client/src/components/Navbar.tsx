@@ -26,7 +26,6 @@ const Navbar = () => {
   }; 
 
   const handleOpenSubMenu = (subMenuItem:string)=> {
-    console.log(subMenuItem);
     // first reset all settings
     setIsHooverSubMenu(resetHoverSubMenu);
     setIsHooverSubMenu((prev)=>{
