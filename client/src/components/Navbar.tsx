@@ -117,11 +117,13 @@ const Navbar = () => {
 
       {/* ---- Light mode :: Only in mobile screen---- */}
       <FormControlLabel
-        className="block sm:hidden"
+        className="block md:hidden"
         control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
         label=""
         onClick={() => { handleLightMode() }}
       />
+
+
 
       <div className="block md:hidden">
         {isOpen ? (
@@ -192,7 +194,7 @@ const Navbar = () => {
 
         {/* -- visible only in larger than mobile version */}
         <FormControlLabel
-          className="hidden sm:block"
+          className="hidden md:block"
           control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
           label=""
           onClick={() => { handleLightMode() }}
