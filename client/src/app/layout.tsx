@@ -1,8 +1,11 @@
+"use client"
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Poppins } from 'next/font/google'
 import Navbar from '@/components/Navbar'
+import { Provider } from 'react-redux'
+import store from "../store/store"
 const inter = Inter({ subsets: ['latin'] })
 
 const poppins = Poppins({
@@ -23,9 +26,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className} >
+      <body >
+      {/* -- Redux provider -- */}
+      <Provider store={store}>
         <Navbar/>
         {children}
+      </Provider>
       </body>
     </html>
   )
